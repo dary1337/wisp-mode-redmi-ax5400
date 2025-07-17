@@ -1,6 +1,6 @@
 # WISP mode on Xiaomi Router AX5400 Gaming Edition
 
-### Be sure you unlocked ssh first: <>
+### Be sure you unlocked ssh first: https://github.com/dary1337/unlock-ssh-xiaomi-router
 
 # Problem
 The repeater mode on the Redmi AX5400 tends to lose the main router for no reason. It may also forget to connect back at all and will have to be rebooted  
@@ -15,9 +15,9 @@ Use the main router's 2.4 GHz network as a WAN
 
 You can connect to the router via LAN cable. The script will not disconnect you, unlike Wi-Fi
 
-## Download wisp.sh
+## Download [wisp.sh](https://raw.githubusercontent.com/dary1337/wisp-mode-redmi-ax5400/refs/heads/master/wisp.sh)
 
-## Now lets edit for your need:
+## Now lets edit it for your needs:
 
 Setup main router SSID and Password
 ```
@@ -112,7 +112,7 @@ Make sure you running that command in the same folder as `wisp.sh`
 </details>  
 
 
-# 
+
 # Important part:
 
 ```
@@ -197,7 +197,7 @@ udhcpc: setting default routers: 192.168.69.10
 
 ## Didnt get IP
 
-### Try put `ieee80211w` to `2`
+### Try put `ieee80211w` to `1`
 
 ```
 network={
