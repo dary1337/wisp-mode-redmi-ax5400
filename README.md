@@ -13,7 +13,7 @@ Use the main router's 2.4 GHz network as a WAN
 
 # Installation
 
-You can connect to the router via LAN cable. The script will not disconnect you, unlike Wi-Fi
+It's better to be connected via a LAN cable. The script will not disconnect you if something went wrong, unlike Wi-Fi
 
 ## Download [wisp.sh](https://raw.githubusercontent.com/dary1337/wisp-mode-redmi-ax5400/refs/heads/master/wisp.sh)
 
@@ -23,7 +23,7 @@ Setup main router SSID and Password
 ```
 SSID="Main Router"
 PSK="Main Password"
-ENC="sae" # sae-mixed, psk2
+ENC="sae" # encryption type: sae, sae-mixed, psk2
 ```
 
 You can also setup backup router if you want
@@ -210,6 +210,16 @@ network={
 ```
 
 ### Try change encryption type of STA
+
+```
+network={
+    ssid="${SSID}"
+    key_mgmt=SAE # here
+    psk="${PSK}"
+    ieee80211w=1
+    priority=10
+}
+```
 
 ```
 ENC="sae" # "sae-mixed" or "psk2"
